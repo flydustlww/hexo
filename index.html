@@ -62,6 +62,85 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JavaScript面向对象精要-读书笔记" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/17/JavaScript面向对象精要-读书笔记/" class="article-date">
+  <time datetime="2020-04-17T06:29:16.000Z" itemprop="datePublished">2020-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/17/JavaScript面向对象精要-读书笔记/">JavaScript面向对象精要--读书笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##基本类型和引用类型</p>
+<p>###1.1什么是类型<br><em>原始类型</em>保存为简单的数据值，<em>引用类型</em>保存为对象，其本质是指向内存位置的引用。<br>为了让开发者能够把原始类型和引用类型按照相同的方式处理（为啥要用相同的方式？）js花费了很大的力气来保证语言的一致性。<br>其他编程语言用stack存储原始类型，用heap存储引用类型。<br>js则不同：它用一个变量对象追踪变量的生命周期（原始值被直接保存在变量对象内，而引用值则作为一个指针保存在变量对象内，也就是说大家都保存在变量对象内）</p>
+<p>###1.2原始类型<br>boolean,number,string,null,undefined<br>js和其他语言一样，原始类型的变量直接存储原始值（引用类型存的是内存中的存储位置）</p>
+<p>####鉴别原始类型<br>typeof ‘hfskjdhf’ // string<br>typeof 10 // number<br>typeof true // boolean<br>typeof undefined // undefined<br>typeof null // object empty object point<br>use value === null // true or false to<br>console.log(“5” == 5); // true<br>console.log(“5” === 5); // false<br>== 会转换类型 ===则不会</p>
+<p>####原始方法<br>虽然string,number,boolean是原始类型值，但是他们也有各自的方法(null undefined没有)<br>‘dfjslf’.toLowerCase();<br>10.toFixed(2);<br>true.toString();<br>‘fhsdkf’.charAt(0)</p>
+<p>###1.3引用类型<br>引用类型指js中的对象，同时也是在js中最接近类的东西。<br>引用值是引用类型的实例，（请说人话？）<br>对象是属性的无序列表，属性包含key（key必须是sting）和value</p>
+<p>####创建对象<br>方法：1 new 构造函数  2</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/17/JavaScript面向对象精要-读书笔记/" data-id="ck93tbk610001n2lf300gt3d4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/31/git/" class="article-date">
+  <time datetime="2019-01-31T03:25:34.000Z" itemprop="datePublished">2019-01-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/31/git/">git</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1配置git-使其对文件名大小写敏感"><a href="#1配置git-使其对文件名大小写敏感" class="headerlink" title="1配置git 使其对文件名大小写敏感"></a>1配置git 使其对文件名大小写敏感</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config core.ignorecase <span class="literal">false</span></span><br><span class="line">git rm readme.md //从本地仓库删除此文件，在添加提交</span><br><span class="line">git add Readme.md</span><br><span class="line">git commit -m <span class="string">'Readme.md'</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/31/git/" data-id="ck93tbk640003n2lfi1cb9nlw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-node-升级" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/01/07/node-升级/" class="article-date">
@@ -92,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/07/node-升级/" data-id="cjrk22xkd0002sslfb7phf60s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/07/node-升级/" data-id="ck93tbk650004n2lf12ioi5gj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/07/My-New-Post/" data-id="cjrk22xkb0001sslfa8mx0auu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/07/My-New-Post/" data-id="ck93tbk630002n2lf8r5mufu4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,7 +257,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/02/hello-world/" data-id="cjrk22xk60000sslft9iq5k7y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/02/hello-world/" data-id="ck93tbk5x0000n2lf9biroskr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -206,7 +285,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
     </div>
   </div>
 
@@ -217,6 +296,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/04/17/JavaScript面向对象精要-读书笔记/">JavaScript面向对象精要--读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/31/git/">git</a>
+          </li>
         
           <li>
             <a href="/2019/01/07/node-升级/">node 升级</a>
@@ -242,7 +329,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
+      &copy; 2020 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

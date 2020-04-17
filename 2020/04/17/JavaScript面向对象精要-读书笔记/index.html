@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>JavaScript面向对象精要--读书笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##基本类型和引用类型 ###1.1什么是类型原始类型保存为简单的数据值，引用类型保存为对象，其本质是指向内存位置的引用。为了让开发者能够把原始类型和引用类型按照相同的方式处理（为啥要用相同的方式？）js花费了很大的力气来保证语言的一致性。其他编程语言用stack存储原始类型，用heap存储引用类型。js则不同：它用一个变量对象追踪变量的生命周期（原始值被直接保存在变量对象内，而引用值则作为一个指">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript面向对象精要--读书笔记">
+<meta property="og:url" content="http://yoursite.com/2020/04/17/JavaScript面向对象精要-读书笔记/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##基本类型和引用类型 ###1.1什么是类型原始类型保存为简单的数据值，引用类型保存为对象，其本质是指向内存位置的引用。为了让开发者能够把原始类型和引用类型按照相同的方式处理（为啥要用相同的方式？）js花费了很大的力气来保证语言的一致性。其他编程语言用stack存储原始类型，用heap存储引用类型。js则不同：它用一个变量对象追踪变量的生命周期（原始值被直接保存在变量对象内，而引用值则作为一个指">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-04-17T07:02:25.278Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript面向对象精要--读书笔记">
+<meta name="twitter:description" content="##基本类型和引用类型 ###1.1什么是类型原始类型保存为简单的数据值，引用类型保存为对象，其本质是指向内存位置的引用。为了让开发者能够把原始类型和引用类型按照相同的方式处理（为啥要用相同的方式？）js花费了很大的力气来保证语言的一致性。其他编程语言用stack存储原始类型，用heap存储引用类型。js则不同：它用一个变量对象追踪变量的生命周期（原始值被直接保存在变量对象内，而引用值则作为一个指">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript面向对象精要-读书笔记" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/17/JavaScript面向对象精要-读书笔记/" class="article-date">
+  <time datetime="2020-04-17T06:29:16.000Z" itemprop="datePublished">2020-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript面向对象精要--读书笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##基本类型和引用类型</p>
+<p>###1.1什么是类型<br><em>原始类型</em>保存为简单的数据值，<em>引用类型</em>保存为对象，其本质是指向内存位置的引用。<br>为了让开发者能够把原始类型和引用类型按照相同的方式处理（为啥要用相同的方式？）js花费了很大的力气来保证语言的一致性。<br>其他编程语言用stack存储原始类型，用heap存储引用类型。<br>js则不同：它用一个变量对象追踪变量的生命周期（原始值被直接保存在变量对象内，而引用值则作为一个指针保存在变量对象内，也就是说大家都保存在变量对象内）</p>
+<p>###1.2原始类型<br>boolean,number,string,null,undefined<br>js和其他语言一样，原始类型的变量直接存储原始值（引用类型存的是内存中的存储位置）</p>
+<p>####鉴别原始类型<br>typeof ‘hfskjdhf’ // string<br>typeof 10 // number<br>typeof true // boolean<br>typeof undefined // undefined<br>typeof null // object empty object point<br>use value === null // true or false to<br>console.log(“5” == 5); // true<br>console.log(“5” === 5); // false<br>== 会转换类型 ===则不会</p>
+<p>####原始方法<br>虽然string,number,boolean是原始类型值，但是他们也有各自的方法(null undefined没有)<br>‘dfjslf’.toLowerCase();<br>10.toFixed(2);<br>true.toString();<br>‘fhsdkf’.charAt(0)</p>
+<p>###1.3引用类型<br>引用类型指js中的对象，同时也是在js中最接近类的东西。<br>引用值是引用类型的实例，（请说人话？）<br>对象是属性的无序列表，属性包含key（key必须是sting）和value</p>
+<p>####创建对象<br>方法：1 new 构造函数  2</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/17/JavaScript面向对象精要-读书笔记/" data-id="ck93tbk610001n2lf300gt3d4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/31/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">git</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/17/JavaScript面向对象精要-读书笔记/">JavaScript面向对象精要--读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/31/git/">git</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/07/node-升级/">node 升级</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/07/My-New-Post/">es6 const let var区别</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/02/hello-world/">2019知识点总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
